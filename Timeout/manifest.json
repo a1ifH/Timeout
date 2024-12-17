@@ -1,0 +1,32 @@
+{
+    "name": "Time Out",
+    "description": "This Extension allows the users to use a chrome extension where they can limit the use of their screen time on their computer. By doing so they can better improve their mental health.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "homepage_url": "https://gitlab.computing.dcu.ie/hossaia5/2022-ca326-hossaia5-tothi2/-/tree/master/",
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "icons/16.png",
+        "24": "icons/24.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "64": "icons/64.png",
+        "128": "icons/128.png",
+        "256": "icons/256.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "css": ["css/content.css"],
+            "js": ["js/content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": ["css/model.css", "icons/notification.png"],
+    "permissions": ["storage", "notifications"]
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/popup.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="logo-row">
+                <img src="icons/32.png" alt="Logo">
+                <h1>Time Out</h1>
+            </div>
+
+            <div class="time-row">
+
+                <div class="hour-input-group input-group">
+                    <input type="number" min="0" max="24" class="hours">
+                    <div>Hours</div>
+                </div>
+
+                <div class="minute-input-group input-group">
+                    <input type="number" min="0" max="59" class="minutes">
+                    <div>Minutes</div>
+                </div>
+
+                <div class="second-input-group input-group">
+                    <input type="number" min="0" max="59" class="seconds">
+                    <div>Seconds</div>
+                </div>
+                
+            </div>
+
+            <div class="intervals">
+                <label for="intervals">No. of Sessions</label>
+                <input id="intervals" type="number" min="1" max="100">
+            </div>
+
+            <div class="progress-bar hidden">
+                <div class="bar">
+                    <span class="perc"></span>      
+                </div>
+            </div>
+
+            <div class="action-btns">
+                <button class="btn start">Start</button>
+                <button class="btn stop">Stop</button>
+                <button class="btn pause">Pause</button>
+                <button class="btn resume">Resume</button>
+                <button class="btn restart">Restart</button>
+            </div>
+
+        </div>
+
+        <script src="js/popup.js"></script>
+
+    </body>
+
+</html>
